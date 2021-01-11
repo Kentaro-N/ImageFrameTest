@@ -32,10 +32,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         // Do any additional setup after loading the view.
         
         //Labelに現在のカウントの値を表示
-        countLabel.text = "\(count)"
+        //countLabel.text = "\(count)"
         
         // landscapeImageViewの背景にライトグレー色を表示
-        landscapeImageView.backgroundColor = UIColor.lightGray
+        //landscapeImageView.backgroundColor = UIColor.lightGray
         
         // landscapeImageViewへの画像表示を Aspect Fitにする
         landscapeImageView.contentMode = UIView.ContentMode.scaleAspectFit
@@ -49,28 +49,37 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     //タッピングの動作
     @IBAction func imageTapGesture(_ sender: Any) {
+       
+        self.performSegue(withIdentifier: "toZoom", sender: nil)
         //アラートで通知
-        let alert = UIAlertController(title: "TapGestureが作動しました", message: "タップされたよ", preferredStyle: .alert)
-        let dismiss = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(dismiss)
-        self.present(alert, animated: true, completion: nil)
+        //let alert = UIAlertController(title: "TapGestureが作動しました", message: "タップされたよ", preferredStyle: .alert)
+        //let dismiss = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        //alert.addAction(dismiss)
+        //self.present(alert, animated: true, completion: nil)
     }
     
     //count値確認用表示（本番は要らない）
-    @IBOutlet weak var countLabel: UILabel!
+    //@IBOutlet weak var countLabel: UILabel!
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のZoomViewControllerを取得する
+        let zoomViewController:ZoomViewController = segue.destination as! ZoomViewController
+        // 遷移先のResultViewControllerで宣言しているx, yに値を代入して渡す
+        zoomViewController.count2 = count + 1
+    }
+    
     // selector: #selector(updatetimer(_:)) で指定された関数
     // timeInterval: 2.0, repeats: true で指定された通り、2秒毎に呼び出され続ける
     @objc func updateTimer(_ timer: Timer) {
         if self.count != 2 {
             self.count += 1
-            countLabel.text = "\(count)"
+            //countLabel.text = "\(count)"
             landscapeImageView.image = imageArray[count]
             
         } else {
             self.count = 0
-            countLabel.text = "\(count)"
+            //countLabel.text = "\(count)"
             landscapeImageView.image = imageArray[count]
         }
     }
@@ -113,12 +122,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func susumu(_ sender: Any) {
         if self.count != 2 {
             self.count += 1
-            countLabel.text = "\(count)"
+            //countLabel.text = "\(count)"
             landscapeImageView.image = imageArray[count]
         
         } else {
             self.count = 0
-            countLabel.text = "\(count)"
+            //countLabel.text = "\(count)"
             landscapeImageView.image = imageArray[count]
             
         }
@@ -130,12 +139,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func modoru(_ sender: Any) {
         if self.count != 0 {
             self.count -= 1
-            countLabel.text = "\(count)"
+            //countLabel.text = "\(count)"
             landscapeImageView.image = imageArray[count]
         
         } else {
             self.count = 2
-            countLabel.text = "\(count)"
+            //countLabel.text = "\(count)"
             landscapeImageView.image = imageArray[count]
             
         }
