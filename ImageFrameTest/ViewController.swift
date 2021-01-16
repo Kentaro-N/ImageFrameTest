@@ -51,6 +51,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func imageTapGesture(_ sender: Any) {
        
         self.performSegue(withIdentifier: "toZoom", sender: nil)
+        
+        //タップされたらタイマーを止める
+        timer.invalidate()
+        
         //アラートで通知
         //let alert = UIAlertController(title: "TapGestureが作動しました", message: "タップされたよ", preferredStyle: .alert)
         //let dismiss = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -110,7 +114,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             // ボタンの名前を再生に直しておく
             startstopButton.setTitle("再生", for: .normal)
             
-            //進むボタンと停止ボタンのタップ不可にする
+            //進むボタンと停止ボタンのタップ可にする
             susumuButton.isEnabled = true
             modoruButton.isEnabled = true
         }
@@ -150,7 +154,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
 
+    //ZoomViewControllerで戻るが押された時の処理
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        // ボタンの名前を再生に直しておく
+        startstopButton.setTitle("再生", for: .normal)
+        
+        //進むボタンと停止ボタンのタップ可にする
+        susumuButton.isEnabled = true
+        modoruButton.isEnabled = true
     }
     
 }

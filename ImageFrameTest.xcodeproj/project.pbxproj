@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9653AB1925B27DAF00923006 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9653AB1625B27DAF00923006 /* image3.png */; };
+		9653AB1A25B27DAF00923006 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9653AB1725B27DAF00923006 /* image1.png */; };
+		9653AB1B25B27DAF00923006 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9653AB1825B27DAF00923006 /* image2.png */; };
 		96DE63C025AC663F000B3E25 /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DE63BF25AC663F000B3E25 /* ZoomViewController.swift */; };
-		96DE63C425AC74E6000B3E25 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE63C125AC74E6000B3E25 /* image3.png */; };
-		96DE63C525AC74E6000B3E25 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE63C225AC74E6000B3E25 /* image1.png */; };
-		96DE63C625AC74E6000B3E25 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE63C325AC74E6000B3E25 /* image2.png */; };
 		96EACE3925AC1C36006688F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACE3825AC1C36006688F2 /* AppDelegate.swift */; };
 		96EACE3B25AC1C36006688F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACE3A25AC1C36006688F2 /* SceneDelegate.swift */; };
 		96EACE3D25AC1C36006688F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EACE3C25AC1C36006688F2 /* ViewController.swift */; };
@@ -20,10 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9653AB1625B27DAF00923006 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3.png; path = ImageFrameTest/image3.png; sourceTree = "<group>"; };
+		9653AB1725B27DAF00923006 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image1.png; path = ImageFrameTest/image1.png; sourceTree = "<group>"; };
+		9653AB1825B27DAF00923006 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2.png; path = ImageFrameTest/image2.png; sourceTree = "<group>"; };
 		96DE63BF25AC663F000B3E25 /* ZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
-		96DE63C125AC74E6000B3E25 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image3.png; path = ImageFrameTest/Assets.xcassets/image3.png; sourceTree = "<group>"; };
-		96DE63C225AC74E6000B3E25 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image1.png; path = ImageFrameTest/Assets.xcassets/image1.png; sourceTree = "<group>"; };
-		96DE63C325AC74E6000B3E25 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = image2.png; path = ImageFrameTest/Assets.xcassets/image2.png; sourceTree = "<group>"; };
 		96EACE3525AC1C36006688F2 /* ImageFrameTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFrameTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EACE3825AC1C36006688F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96EACE3A25AC1C36006688F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,9 +50,9 @@
 			children = (
 				96EACE3725AC1C36006688F2 /* ImageFrameTest */,
 				96EACE3625AC1C36006688F2 /* Products */,
-				96DE63C225AC74E6000B3E25 /* image1.png */,
-				96DE63C325AC74E6000B3E25 /* image2.png */,
-				96DE63C125AC74E6000B3E25 /* image3.png */,
+				9653AB1725B27DAF00923006 /* image1.png */,
+				9653AB1825B27DAF00923006 /* image2.png */,
+				9653AB1625B27DAF00923006 /* image3.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,11 +138,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				96EACE4525AC1C36006688F2 /* LaunchScreen.storyboard in Resources */,
-				96DE63C525AC74E6000B3E25 /* image1.png in Resources */,
-				96DE63C625AC74E6000B3E25 /* image2.png in Resources */,
+				9653AB1A25B27DAF00923006 /* image1.png in Resources */,
+				9653AB1B25B27DAF00923006 /* image2.png in Resources */,
 				96EACE4225AC1C36006688F2 /* Assets.xcassets in Resources */,
 				96EACE4025AC1C36006688F2 /* Main.storyboard in Resources */,
-				96DE63C425AC74E6000B3E25 /* image3.png in Resources */,
+				9653AB1925B27DAF00923006 /* image3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
